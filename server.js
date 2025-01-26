@@ -2,12 +2,12 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; // Use Render’s assigned port
 
-// Serve static files (CSS, JS, etc.)
+// Serve static files
 app.use(express.static("public"));
 
-// Route to serve the landing page
+// Landing Page Route
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });

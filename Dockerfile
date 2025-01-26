@@ -1,20 +1,18 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18-alpine
+# Use the latest Node.js image
+FROM node:18
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy package.json and install dependencies
 COPY package*.json ./
+RUN npm install
 
-# Install dependencies
-RUN npm install --only=production
-
-# Copy the rest of the application
+# Copy all files into the container
 COPY . .
 
-# Expose port 3000 to the outside world
-EXPOSE 3000
+# Expose port 10000 (Render default) and 3000 (our choice)
+EXPOSE 10000 3000
 
-# Command to run the application
-CMD ["npm", "start"]
+# Start the application
+CMD ["node", "server.js"]
