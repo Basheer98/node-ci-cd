@@ -70,10 +70,11 @@ Go to GitHub → Actions Tab and verify the pipeline.
 Whenever you push to GitHub, Render automatically pulls the latest Docker image and redeploys.
 
  	Technologies Used
-Tech			Purpose
-Node.js	Backend 	Framework
-Express.js		Lightweight API Server
-Docker			Containerization
-Render			Deployment Platform
-GitHub Actions		CI/CD Pipeline
-TailwindCSS		Modern UI Styling
+
+	Tech			Purpose
+	Node.js	Backend 	Framework
+	Express.js		Lightweight API Server
+	Docker			Containerization
+	Render			Deployment Platform
+	GitHub Actions		CI/CD Pipeline
+	TailwindCSS		Modern UI Styling
