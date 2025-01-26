@@ -1,15 +1,22 @@
-const express = require('express');
-const app = express();
+const express = require("express");
+const path = require("path");
 
-// Define the port
+const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Basic API Endpoint
-app.get('/api', (req, res) => {
-    res.json({ message: "🚀 CI/CD Node.js App is Running!" });
+// Serve static files (CSS, JS, etc.)
+app.use(express.static("public"));
+
+// Route to serve the landing page
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// Start the server
+// API Route
+app.get("/api", (req, res) => {
+  res.json({ message: "🚀 CI/CD Node.js App is Running!" });
+});
+
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 CI/CD in Action</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animated gradient background */
+        body {
+            background: linear-gradient(-45deg, #1e1e2e, #24243e, #232526, #3b3b4f);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Glass effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            max-width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen text-white">
+
+    <div class="glass shadow-lg p-8">
+        <h1 class="text-4xl font-extrabold tracking-wide mb-4 text-white">🚀 CI/CD Pipeline in Action</h1>
+        <p class="text-lg text-gray-300">This app is automatically deployed using <span class="text-blue-400">Docker</span> & <span class="text-green-400">GitHub Actions</span>.</p>
+        
+        <div class="mt-6">
+            <a href="/api" class="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-all">
+                🔥 Check API Response
+            </a>
+        </div>
+
+        <p class="mt-4 text-sm text-gray-400">Built with ❤️ using <span class="text-yellow-400">Node.js</span> + <span class="text-blue-400">Render</span>.</p>
+    </div>
+
+</body>
+</html>
